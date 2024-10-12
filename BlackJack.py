@@ -3,6 +3,11 @@ import time
 import json
 
 class BlackJack:
+    __cards: list[dict[str, str | int]] | None
+    __state: str
+    __states: list[str]
+    __tookCards: list[list[dict[str, str | int]]]
+    
     def __init__(self):
         self.__cards = None
         self.__state = "Default"
@@ -10,7 +15,7 @@ class BlackJack:
         self.__states = []
         
     def openPacket(self):
-        with open("./cards.json", "r") as file:
+        with open("./json/cards.json", "r") as file:
             self.__cards = json.load(file)
             
     def decreaseAvailability(self, name: str):
