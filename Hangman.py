@@ -96,7 +96,7 @@ class Hangman:
         }
         self.__icons_list = ["hat", "head", "shirt", "pants", "boots"]
         self.__words = []
-        self.__words = ""
+        self.__word = ""
         self.__current = ""
         self.__result = "Undefined"
         
